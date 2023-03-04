@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="athor" content="Isabel Maria Montoya">
+    <meta name="keywords" content="dq, dragon quest, las aventuras de fly, dragon quest emblema de roto,square enix">
+    <link rel="shortcut icon" type="image/x-icon" href="./iconos/Limo__DQVIII_.ico">
+    <link rel="stylesheet" href="./estilos/style general.css">
+    <link rel="stylesheet" href="./estilos/style_encuesta.css">
+    <script src="./Javascript/javascript_encuesta.js"></script>
+
+    <title>Dragon quest</title>
+</head>
+
+<body>
+    <div class="cabecera">
+        <h1 id="cab">Dragon Quest</h1>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagina_juegos.html">Juegos</a>
+                <ul>
+                    <li><a href="pagina_juegos_saga1a3.html">Saga del 1 al 3</a></li>
+                    <li><a href="pagina_juegos_saga4a6.html">Saga del 4 al 6</a></li>
+                    <li><a href="pagina_juegos_saga8a11.html">Saga del 7 al 11</a></li>
+                    <li><a href="pagina_juegos_otros.html">Otros</a></li>
+                </ul>
+            </li>
+            <li><a href="pagina_libros.html">Libros</a></li>
+            <li><a href="Encuesta.html">Encuesta</a></li>
+        </ul>
+        </li>
+        </ul>
+    </div>
+    <div id=caja_encuesta>
+        <form action="" method="post" name="formulario" id="formulario" onsubmit="return false">
+            <h1 id="enc">Encuesta dragon quest</h1>
+            <div id="preg1" name="preg1">
+                <label for="personaje">¿Qué personaje de las distintas sagas te gusta más?</label>
+                <input id="personaje" type="text" name="personaje"><br><br>
+                <button onclick="verPregunta(2);">Siguiente</button>
+            </div>
+            <div class="oculto" id="preg2">
+                <fieldset>
+                    <legend>2.¿Qué plataforma sueles utilizar para jugar?</legend>
+                    <input type="checkbox" id="Nintendo" name="consola" value="Nintendo ds">
+                    <label for="Nintendo">Nintendo ds</label><br>
+                    <input type="checkbox" id="PC" name="consola" value="Ordenador">
+                    <label for="PC">Ordenador</label><br>
+                    <input type="checkbox" id="Play Station" name="consola" value="Play Station">
+                    <label for="Play Station">Play Station</label><br><br>
+                </fieldset><br>
+                <input type="button" name="Siguente" value="Siguiente" onclick="verPregunta(3);">
+                <input type="button" name="Anterior" value="Anterior" onclick="verPregunta(1);">
+            </div>
+            <div class="oculto" id="preg3">
+                <fieldset>
+                    <legend>¿Cual de estos cuatro juegos de la saga principal para ti tiene mejor historia?</legend>
+                    <input type="checkbox" id="Dq3" name="Saga" value="Dq_3">
+                    <label for="Dq3">Dragon quest 3</label><br>
+                    <input type="checkbox" id="Dq4" name="Saga" value="Dq_4">
+                    <label for="Dq4">Dragon quest 4</label><br>
+                    <input type="checkbox" id="Dq8" name="Saga" value="Dq_8">
+                    <label for="Dq9">Dragon quest 8</label><br><br>
+                    <input type="checkbox" id="Dq9" name="Saga" value="Dq_9">
+                    <label for="Dq8">Dragon quest 9</label><br><br>
+                </fieldset>
+                <input type="button" name="Siguente" value="Siguiente" onclick="verPregunta(4);">
+                <input type="button" name="Anterior" value="Anterior" onclick="verPregunta(2);">
+            </div>
+            <div class="oculto" id="preg4">
+                <fieldset>
+                    <legend> 4.¿Qué es lo que destacarias de las distintas sagas?</legend>
+                    <input type="checkbox" id="diseño" name="destacado" value="diseñop">
+                    <label for="diseño">Diseño de paisajes</label><br>
+                    <input type="checkbox" id="jugabilidad" name="destacado" value="jugabilidad1">
+                    <label for="jugabilidad">Jugabilidad</label><br>
+                    <input type="checkbox" id="banda" name="destacado" value="banda sonora">
+                    <label for="banda">Banda sonora</label><br><br>
+                </fieldset>
+                <input type="button" name="Siguente" value="Siguiente" onclick="verPregunta(5);">
+                <input type="button" name="Anterior" value="Anterior" onclick="verPregunta(3);">
+            </div>
+            <div class="oculto" id="preg5">
+                <label for="heroe">5.¿Que heroe de las distintas sagas crees que es el más fuerte?</label>
+                <input id="heroe" type="text" name="heroe"><br><br>
+
+                <input type="button" name="Anterior" value="Anterior" onclick="verPregunta(4);"><br><br>
+            </div>
+            <input type="submit" value="Enviar" id="envio" name="boton" onclick="validar();"><br><br><br><br>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
